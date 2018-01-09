@@ -31212,11 +31212,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rugro\\source\\repos\\TSPFaceRecRasPi\\TSPFaceRecRasPi\\TSPFaceRecRasPi.csproj",
+      "projectUniqueName": "C:\\Users\\rugro\\Source\\Repos\\SCDemo-Facerec\\SCDemo-Facerec.RasPi.UWP\\TSPFaceRecRasPi\\TSPFaceRecRasPi.csproj",
       "projectName": "TSPFaceRecRasPi",
-      "projectPath": "C:\\Users\\rugro\\source\\repos\\TSPFaceRecRasPi\\TSPFaceRecRasPi\\TSPFaceRecRasPi.csproj",
+      "projectPath": "C:\\Users\\rugro\\Source\\Repos\\SCDemo-Facerec\\SCDemo-Facerec.RasPi.UWP\\TSPFaceRecRasPi\\TSPFaceRecRasPi.csproj",
       "packagesPath": "C:\\Users\\rugro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rugro\\source\\repos\\TSPFaceRecRasPi\\TSPFaceRecRasPi\\obj\\",
+      "outputPath": "C:\\Users\\rugro\\Source\\Repos\\SCDemo-Facerec\\SCDemo-Facerec.RasPi.UWP\\TSPFaceRecRasPi\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

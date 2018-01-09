@@ -10,22 +10,22 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>21bc28d4-3cb1-4ee3-ba36-3dc0b04f9bcf</PackageIdentityName>
     <PackageIdentityPublisher>CN=rugro</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\bin\x86\Debug\TSPFaceRecRasPi.exe">
+    <AppxPackagedFile Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\bin\x86\Debug\TSPFaceRecRasPi.exe">
       <PackagePath>entrypoint\TSPFaceRecRasPi.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rugro\.nuget\packages\dotnetty.buffers\0.4.4\lib\netstandard1.3\DotNetty.Buffers.dll">
@@ -544,47 +544,47 @@
     <AppxPackagedFile Include="C:\Users\rugro\.nuget\packages\windowsazure.storage\8.7.0\lib\win8\Microsoft.WindowsAzure.Storage.dll">
       <PackagePath>Microsoft.WindowsAzure.Storage.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\bin\x86\Debug\TSPFaceRecRasPi.xr.xml">
+    <AppxPackagedFile Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\bin\x86\Debug\TSPFaceRecRasPi.xr.xml">
       <PackagePath>TSPFaceRecRasPi.xr.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\bin\x86\Debug\Core\TSPFaceRecRasPi.exe">
+    <AppxPackagedFile Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\bin\x86\Debug\Core\TSPFaceRecRasPi.exe">
       <PackagePath>TSPFaceRecRasPi.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

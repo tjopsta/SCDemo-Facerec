@@ -9,9 +9,8 @@ using Windows.Storage;
 using Windows.Storage.Streams;
 using System.Threading.Tasks;
 using System.IO;
+using Windows.Devices.Gpio;
 
-
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace TSPFaceRecRasPi
 {
@@ -31,9 +30,12 @@ namespace TSPFaceRecRasPi
         private bool isPreviewing;
         private bool isRecording;
 
-        //static RegistryManager registryManager;
-        //static string connectionString = "HostName=SCDemo-IotHub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=i89D/+UpevOAIWhZw1pGS9oOg+zdVdUenGvEOwP4PQ8=";
-
+        private const int LED_PIN = 13;
+        private const int BUTTON_PIN = 36;
+        private GpioPin ledPin;
+        private GpioPin buttonPin;
+        private GpioPinValue ledPinValue = GpioPinValue.High;
+        
 
 
         #region HELPER_FUNCTIONS
@@ -51,12 +53,12 @@ namespace TSPFaceRecRasPi
         {
             if (action == Action.ENABLE)
             {
-                video_init.IsEnabled = true;
+                
                 audio_init.IsEnabled = true;
             }
             else
             {
-                video_init.IsEnabled = false;
+                
                 audio_init.IsEnabled = false;
             }
         }
@@ -113,33 +115,59 @@ namespace TSPFaceRecRasPi
 
             isRecording = false;
             isPreviewing = false;
+
+            InitVideo();
+            InitGPIO();
+
         }
 
 
-
-        private async void Cleanup()
+        private void InitGPIO()
         {
-            if (mediaCapture != null)
+            var gpio = GpioController.GetDefault();
+
+            // Show an error if there is no GPIO controller
+            if (gpio == null)
             {
-                // Cleanup MediaCapture object
-                if (isPreviewing)
-                {
-                    await mediaCapture.StopPreviewAsync();
-                    captureImage.Source = null;
-                    playbackElement.Source = null;
-                    isPreviewing = false;
-                }
-                if (isRecording)
-                {
-                    await mediaCapture.StopRecordAsync();
-                    isRecording = false;
-                    recordVideo.Content = "Start Video Record";
-                    recordAudio.Content = "Start Audio Record";
-                }
-                mediaCapture.Dispose();
-                mediaCapture = null;
+                ///*GpioStatus.Text = "There is n*/o GPIO controller on this device.";
+                return;
             }
-            SetInitButtonVisibility(Action.ENABLE);
+
+            buttonPin = gpio.OpenPin(BUTTON_PIN);
+            ledPin = gpio.OpenPin(LED_PIN);
+
+            // Initialize LED to the OFF state by first writing a HIGH value
+            // We write HIGH because the LED is wired in a active LOW configuration
+            ledPin.Write(GpioPinValue.High);
+            ledPin.SetDriveMode(GpioPinDriveMode.Output);
+
+            // Check if input pull-up resistors are supported
+            if (buttonPin.IsDriveModeSupported(GpioPinDriveMode.InputPullUp))
+                buttonPin.SetDriveMode(GpioPinDriveMode.InputPullUp);
+            else
+                buttonPin.SetDriveMode(GpioPinDriveMode.Input);
+
+            // Set a debounce timeout to filter out switch bounce noise from a button press
+            buttonPin.DebounceTimeout = TimeSpan.FromMilliseconds(50);
+
+            // Register for the ValueChanged event so our buttonPin_ValueChanged 
+            // function is called when the button is pressed
+            buttonPin.ValueChanged += buttonPin_ValueChanged;
+
+            //GpioStatus.Text = "GPIO pins initialized correctly.";
+        }
+
+        private void buttonPin_ValueChanged(GpioPin sender, GpioPinValueChangedEventArgs e)
+        {
+            // toggle the state of the LED every time the button is pressed
+            if (e.Edge == GpioPinEdge.FallingEdge)
+            {
+                ledPinValue = (ledPinValue == GpioPinValue.Low) ?
+                    GpioPinValue.High : GpioPinValue.Low;
+                ledPin.Write(ledPinValue);
+            }
+
+            
         }
 
         /// <summary>
@@ -154,7 +182,7 @@ namespace TSPFaceRecRasPi
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private async void initVideo_Click(object sender, RoutedEventArgs e)
+        private async void InitVideo()
         {
             // Disable all buttons until initialization completes
 
@@ -211,7 +239,91 @@ namespace TSPFaceRecRasPi
             {
                 status.Text = "Unable to initialize camera for audio/video mode: " + ex.Message;
             }
+
+
         }
+        
+        private async void Cleanup()
+        {
+            if (mediaCapture != null)
+            {
+                // Cleanup MediaCapture object
+                if (isPreviewing)
+                {
+                    await mediaCapture.StopPreviewAsync();
+                    captureImage.Source = null;
+                    playbackElement.Source = null;
+                    isPreviewing = false;
+                }
+                if (isRecording)
+                {
+                    await mediaCapture.StopRecordAsync();
+                    isRecording = false;
+                    recordVideo.Content = "Start Video Record";
+                    recordAudio.Content = "Start Audio Record";
+                }
+                mediaCapture.Dispose();
+                mediaCapture = null;
+            }
+            SetInitButtonVisibility(Action.ENABLE);
+        }
+
+        private async void TakePicture()
+        {
+        try
+            {
+                takePhoto.IsEnabled = false;
+                recordVideo.IsEnabled = false;
+                captureImage.Source = null;
+
+
+                //new Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation().Id.ToString()
+
+                PHOTO_FILE_NAME = "YYC01_" 
+                    + DateTime.UtcNow.Year + DateTime.UtcNow.Month + DateTime.UtcNow.Day + DateTime.UtcNow.Hour + DateTime.UtcNow.Minute 
+                    + DateTime.UtcNow.Second + ".jpg";
+
+
+                photoFile = await KnownFolders.PicturesLibrary.CreateFileAsync(
+                    PHOTO_FILE_NAME, CreationCollisionOption.GenerateUniqueName);
+                ImageEncodingProperties imageProperties = ImageEncodingProperties.CreateJpeg();
+                await mediaCapture.CapturePhotoToStorageFileAsync(imageProperties, photoFile);
+                takePhoto.IsEnabled = true;
+                status.Text = "Take Photo succeeded and file saved to: " + photoFile.Path;
+
+                IRandomAccessStream photoStream = await photoFile.OpenReadAsync();
+                BitmapImage bitmap = new BitmapImage();
+                bitmap.SetSource(photoStream);
+                captureImage.Source = bitmap;
+                //---------------------------------------------------------------------------
+                status.Text = "Uploading Photo to IOT Hub";
+
+                var reader = new DataReader(photoStream.GetInputStreamAt(0));
+                var bytes = new byte[photoStream.Size];
+                await reader.LoadAsync((uint)photoStream.Size);
+                reader.ReadBytes(bytes);
+                var stream = new MemoryStream(bytes);
+
+                await AzureIoTHub.SendToBlobAsyncStream(photoFile, stream);
+
+          
+                status.Text = "File Uploaded!";
+            }
+
+
+            
+            catch (Exception ex)
+            {
+                status.Text = ex.Message;
+                Cleanup();
+            }
+            finally
+            {
+                takePhoto.IsEnabled = true;
+                recordVideo.IsEnabled = true;
+            }
+        }
+
 
         private void cleanup_Click(object sender, RoutedEventArgs e)
         {
@@ -281,7 +393,7 @@ namespace TSPFaceRecRasPi
                 SetAudioButtonVisibility(Action.ENABLE);
 
                 // Enable Audio and video Only Init button
-                video_init.IsEnabled = true;
+           
             }
             catch (Exception ex)
             {
@@ -297,58 +409,7 @@ namespace TSPFaceRecRasPi
         /// <param name="e"></param>
         private async void takePhoto_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                takePhoto.IsEnabled = false;
-                recordVideo.IsEnabled = false;
-                captureImage.Source = null;
-
-
-                //new Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation().Id.ToString()
-
-                PHOTO_FILE_NAME = "YYC01_" 
-                    + DateTime.UtcNow.Year + DateTime.UtcNow.Month + DateTime.UtcNow.Day + DateTime.UtcNow.Hour + DateTime.UtcNow.Minute 
-                    + DateTime.UtcNow.Second + ".jpg";
-
-
-                photoFile = await KnownFolders.PicturesLibrary.CreateFileAsync(
-                    PHOTO_FILE_NAME, CreationCollisionOption.GenerateUniqueName);
-                ImageEncodingProperties imageProperties = ImageEncodingProperties.CreateJpeg();
-                await mediaCapture.CapturePhotoToStorageFileAsync(imageProperties, photoFile);
-                takePhoto.IsEnabled = true;
-                status.Text = "Take Photo succeeded and file saved to: " + photoFile.Path;
-
-                IRandomAccessStream photoStream = await photoFile.OpenReadAsync();
-                BitmapImage bitmap = new BitmapImage();
-                bitmap.SetSource(photoStream);
-                captureImage.Source = bitmap;
-                //---------------------------------------------------------------------------
-                status.Text = "Uploading Photo to IOT Hub";
-
-                var reader = new DataReader(photoStream.GetInputStreamAt(0));
-                var bytes = new byte[photoStream.Size];
-                await reader.LoadAsync((uint)photoStream.Size);
-                reader.ReadBytes(bytes);
-                var stream = new MemoryStream(bytes);
-
-                await AzureIoTHub.SendToBlobAsyncStream(photoFile, stream);
-
-          
-                status.Text = "File Uploaded!";
-            }
-
-
-            
-            catch (Exception ex)
-            {
-                status.Text = ex.Message;
-                Cleanup();
-            }
-            finally
-            {
-                takePhoto.IsEnabled = true;
-                recordVideo.IsEnabled = true;
-            }
+            TakePicture();
         }
 
 
@@ -562,45 +623,8 @@ namespace TSPFaceRecRasPi
             }
         }
 
-        
-        private void CmdRegisterIOT_Click(object sender, RoutedEventArgs e)
-        {
-
-            //registryManager = RegistryManager.CreateFromConnectionString(connectionString);
-            //AddDeviceAsync().Wait();
-
-            //var deviceInfo = new Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation().Id.ToString();
-            //var deviceName = deviceInfo.FriendlyName;
-            //var deviceidguid = deviceInfo.Id.ToString();
-            
-            //txtDeviceKey.Text = deviceidguid;
-
-            
-            //registryManager = RegistryManager.CreateFromConnectionString(connectionString);
-            //AddDeviceAsync().Wait();
-
-
-
-        }
-
-        //private async Task AddDeviceAsync()
-        //{
-        //    string deviceId = "myFirstDevice";
-        //    Device device;
-
-        //    try
-        //    {
-        //        device = await registryManager.AddDeviceAsync(new Device(deviceId));
-        //    }
-        //    catch (DeviceAlreadyExistsException)
-        //    {
-        //        device = await registryManager.GetDeviceAsync(deviceId);
-        //    }
-
-        //}
-
-
-       
+          
+     
 
 
     }

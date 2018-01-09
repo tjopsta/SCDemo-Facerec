@@ -1,1 +1,1 @@
-C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\TSPFaceRecRasPi.csproj;x86
+C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\TSPFaceRecRasPi.csproj;x86
