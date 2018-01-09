@@ -30,8 +30,8 @@ namespace TSPFaceRecRasPi
         private bool isPreviewing;
         private bool isRecording;
 
-        private const int LED_PIN = 13;
-        private const int BUTTON_PIN = 36;
+        private const int LED_PIN = 31;
+        private const int BUTTON_PIN = 29;
         private GpioPin ledPin;
         private GpioPin buttonPin;
         private GpioPinValue ledPinValue = GpioPinValue.High;
@@ -117,7 +117,7 @@ namespace TSPFaceRecRasPi
             isPreviewing = false;
 
             InitVideo();
-            InitGPIO();
+            //InitGPIO();
 
         }
 

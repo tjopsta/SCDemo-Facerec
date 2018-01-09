@@ -10,7 +10,7 @@
     <PackageArchitecture>arm</PackageArchitecture>
     <PackageIdentityName>21bc28d4-3cb1-4ee3-ba36-3dc0b04f9bcf</PackageIdentityName>
     <PackageIdentityPublisher>CN=rugro</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\obj\ARM\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\obj\ARM\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\bin\ARM\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\bin\ARM\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>FB4F4290F8FEF671445871826C1A29E419CE828167482F7DAEE1E4CCCA2D8672</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>21bc28d4-3cb1-4ee3-ba36-3dc0b04f9bcf_1.0.0.0_arm__v66w70hbm8036</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>21bc28d4-3cb1-4ee3-ba36-3dc0b04f9bcf_v66w70hbm8036!App</RegisteredUserModeAppID>
@@ -28,16 +28,16 @@
     <JitOptimizationSuppressed>False</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\bin\ARM\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\bin\ARM\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-01-09T18:25:42.489</Modified>
+      <Modified>2018-01-09T21:49:30.241</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\bin\ARM\Debug\TSPFaceRecRasPi.exe">
+    <AppxPackagedFile Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\bin\ARM\Debug\TSPFaceRecRasPi.exe">
       <PackagePath>entrypoint\TSPFaceRecRasPi.exe</PackagePath>
-      <Modified>2018-01-09T18:25:41.617</Modified>
+      <Modified>2018-01-09T21:49:29.476</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rugro\.nuget\packages\dotnetty.buffers\0.4.4\lib\netstandard1.3\DotNetty.Buffers.dll">
       <PackagePath>DotNetty.Buffers.dll</PackagePath>
@@ -723,60 +723,60 @@
       <PackagePath>Microsoft.WindowsAzure.Storage.dll</PackagePath>
       <Modified>2017-12-14T19:57:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2018-01-08T19:41:53.061</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2018-01-07T00:07:29.978</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-01-07T00:07:29.978</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-01-07T00:07:29.978</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-01-07T00:07:29.978</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-01-07T00:07:29.978</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-01-07T00:07:29.978</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-01-07T00:07:29.978</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\bin\ARM\Debug\TSPFaceRecRasPi.xr.xml">
+    <AppxPackagedFile Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\bin\ARM\Debug\TSPFaceRecRasPi.xr.xml">
       <PackagePath>TSPFaceRecRasPi.xr.xml</PackagePath>
-      <Modified>2018-01-08T21:48:49.476</Modified>
+      <Modified>2018-01-09T20:15:24.552</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2017-09-29T00:28:16.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\bin\ARM\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\bin\ARM\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-01-09T16:49:50.382</Modified>
+      <Modified>2018-01-09T20:15:31.838</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\bin\ARM\Debug\Core\TSPFaceRecRasPi.exe">
+    <AppxPackagedFile Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\bin\ARM\Debug\Core\TSPFaceRecRasPi.exe">
       <PackagePath>TSPFaceRecRasPi.exe</PackagePath>
-      <Modified>2018-01-09T18:25:42.483</Modified>
+      <Modified>2018-01-09T21:49:30.235</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
