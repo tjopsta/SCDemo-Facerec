@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace SCDemo_FaceRec_Web
+namespace SCDemoFaceRecWeb
 {
     public class Startup
     {

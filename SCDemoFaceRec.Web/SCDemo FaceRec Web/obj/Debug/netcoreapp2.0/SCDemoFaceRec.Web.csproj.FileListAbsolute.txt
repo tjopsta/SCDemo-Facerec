@@ -1,0 +1,12 @@
+C:\code\SCDemo-Facerec\SCDemoFaceRec.Web\SCDemo FaceRec Web\obj\Debug\netcoreapp2.0\SCDemoFaceRec.Web.csprojResolveAssemblyReference.cache
+C:\code\SCDemo-Facerec\SCDemoFaceRec.Web\SCDemo FaceRec Web\obj\Debug\netcoreapp2.0\SCDemoFaceRec.Web.csproj.CoreCompileInputs.cache
+C:\code\SCDemo-Facerec\SCDemoFaceRec.Web\SCDemo FaceRec Web\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\code\SCDemo-Facerec\SCDemoFaceRec.Web\SCDemo FaceRec Web\obj\Debug\netcoreapp2.0\SCDemoFaceRec.Web.AssemblyInfoInputs.cache
+C:\code\SCDemo-Facerec\SCDemoFaceRec.Web\SCDemo FaceRec Web\obj\Debug\netcoreapp2.0\SCDemoFaceRec.Web.AssemblyInfo.cs
+C:\code\SCDemo-Facerec\SCDemoFaceRec.Web\SCDemo FaceRec Web\bin\Debug\netcoreapp2.0\SCDemoFaceRec.Web.deps.json
+C:\code\SCDemo-Facerec\SCDemoFaceRec.Web\SCDemo FaceRec Web\bin\Debug\netcoreapp2.0\SCDemoFaceRec.Web.runtimeconfig.json
+C:\code\SCDemo-Facerec\SCDemoFaceRec.Web\SCDemo FaceRec Web\bin\Debug\netcoreapp2.0\SCDemoFaceRec.Web.runtimeconfig.dev.json
+C:\code\SCDemo-Facerec\SCDemoFaceRec.Web\SCDemo FaceRec Web\bin\Debug\netcoreapp2.0\SCDemoFaceRec.Web.dll
+C:\code\SCDemo-Facerec\SCDemoFaceRec.Web\SCDemo FaceRec Web\bin\Debug\netcoreapp2.0\SCDemoFaceRec.Web.pdb
+C:\code\SCDemo-Facerec\SCDemoFaceRec.Web\SCDemo FaceRec Web\obj\Debug\netcoreapp2.0\SCDemoFaceRec.Web.dll
+C:\code\SCDemo-Facerec\SCDemoFaceRec.Web\SCDemo FaceRec Web\obj\Debug\netcoreapp2.0\SCDemoFaceRec.Web.pdb

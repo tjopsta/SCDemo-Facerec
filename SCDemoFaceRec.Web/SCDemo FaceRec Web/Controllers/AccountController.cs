@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace SCDemo_FaceRec_Web.Controllers
+namespace SCDemoFaceRecWeb.Controllers
 {
     [Route("[controller]/[action]")]
     public class AccountController : Controller

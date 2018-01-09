@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using SCDemo_FaceRec_Web.Models;
+using SCDemoFaceRecWeb.Models;
 
-namespace SCDemo_FaceRec_Web.Controllers
+namespace SCDemoFaceRecWeb.Controllers
 {
     public class HomeController : Controller
     {

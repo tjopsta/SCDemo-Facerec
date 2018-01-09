@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace SCDemo_FaceRec_Web
+namespace SCDemoFaceRecWeb
 {
     public class Program
     {
