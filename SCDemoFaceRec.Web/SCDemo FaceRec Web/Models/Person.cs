@@ -20,5 +20,7 @@ namespace SCDemoFaceRecWeb.Models
         public string ImageUrl { get; set; }
         public string CameraId { get; set; }
         public DateTime CaptureDate { get; set; }
+
+        public int NumFaces { get; set; }
     }
 }
