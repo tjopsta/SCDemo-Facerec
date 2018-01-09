@@ -5,7 +5,6 @@ C:\code\SCDemo-Facerec\SCDemoFaceRec.Web\SCDemo FaceRec Web\bin\Debug\netcoreapp
 C:\code\SCDemo-Facerec\SCDemoFaceRec.Web\SCDemo FaceRec Web\bin\Debug\netcoreapp2.0\SCDemo FaceRec Web.pdb
 C:\code\SCDemo-Facerec\SCDemoFaceRec.Web\SCDemo FaceRec Web\obj\Debug\netcoreapp2.0\SCDemo FaceRec Web.csprojResolveAssemblyReference.cache
 C:\code\SCDemo-Facerec\SCDemoFaceRec.Web\SCDemo FaceRec Web\obj\Debug\netcoreapp2.0\SCDemo FaceRec Web.csproj.CoreCompileInputs.cache
-C:\code\SCDemo-Facerec\SCDemoFaceRec.Web\SCDemo FaceRec Web\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
 C:\code\SCDemo-Facerec\SCDemoFaceRec.Web\SCDemo FaceRec Web\obj\Debug\netcoreapp2.0\SCDemo FaceRec Web.AssemblyInfoInputs.cache
 C:\code\SCDemo-Facerec\SCDemoFaceRec.Web\SCDemo FaceRec Web\obj\Debug\netcoreapp2.0\SCDemo FaceRec Web.AssemblyInfo.cs
 C:\code\SCDemo-Facerec\SCDemoFaceRec.Web\SCDemo FaceRec Web\obj\Debug\netcoreapp2.0\SCDemo FaceRec Web.dll
