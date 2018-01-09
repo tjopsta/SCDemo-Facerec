@@ -1,0 +1,1 @@
+C:\Users\rugro\source\repos\TSPFaceRecRasPi\TSPFaceRecRasPi\TSPFaceRecRasPi.csproj;x86
