@@ -30,8 +30,8 @@ namespace TSPFaceRecRasPi
         private bool isPreviewing;
         private bool isRecording;
 
-        private const int LED_PIN = 31;
-        private const int BUTTON_PIN = 29;
+        private const int LED_PIN = 36;
+        private const int BUTTON_PIN = 35;
         private GpioPin ledPin;
         private GpioPin buttonPin;
         private GpioPinValue ledPinValue = GpioPinValue.High;
@@ -125,6 +125,7 @@ namespace TSPFaceRecRasPi
         private void InitGPIO()
         {
             var gpio = GpioController.GetDefault();
+            
 
             // Show an error if there is no GPIO controller
             if (gpio == null)

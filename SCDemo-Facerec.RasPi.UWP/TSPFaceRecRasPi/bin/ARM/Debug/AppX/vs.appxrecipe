@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\bin\ARM\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-01-09T21:49:30.241</Modified>
+      <Modified>2018-01-09T22:55:28.978</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\bin\ARM\Debug\TSPFaceRecRasPi.exe">
       <PackagePath>entrypoint\TSPFaceRecRasPi.exe</PackagePath>
-      <Modified>2018-01-09T21:49:29.476</Modified>
+      <Modified>2018-01-09T22:55:28.204</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rugro\.nuget\packages\dotnetty.buffers\0.4.4\lib\netstandard1.3\DotNetty.Buffers.dll">
       <PackagePath>DotNetty.Buffers.dll</PackagePath>
@@ -776,7 +776,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rugro\Source\Repos\SCDemo-Facerec\SCDemo-Facerec.RasPi.UWP\TSPFaceRecRasPi\bin\ARM\Debug\Core\TSPFaceRecRasPi.exe">
       <PackagePath>TSPFaceRecRasPi.exe</PackagePath>
-      <Modified>2018-01-09T21:49:30.235</Modified>
+      <Modified>2018-01-09T22:55:28.968</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
