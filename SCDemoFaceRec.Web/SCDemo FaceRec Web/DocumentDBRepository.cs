@@ -1,18 +1,19 @@
 ﻿using Microsoft.Azure.Documents;
 using Microsoft.Azure.Documents.Client;
 using Microsoft.Azure.Documents.Linq;
-using System.Linq.Expressions;
 using System.Threading.Tasks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using SCDemoFaceRecWeb.Models;
+using Newtonsoft.Json;
 
 namespace SCDemoFaceRec.Web
 {
     public interface IDocumentDBRepository
     {
         Task<IEnumerable<Person>> GetItemsFromCollectionAsync();
+        Task<Person> GetItemFromCollectionAsync(string id);
     }
 
     public class DocumentDBRepository : IDocumentDBRepository
@@ -105,6 +106,31 @@ namespace SCDemoFaceRec.Web
                 persons.AddRange(await documents.ExecuteNextAsync<Person>());
             }
             return persons;
+        }
+
+        /// <summary>
+        /// Method to read Item from the document based on id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public async Task<Person> GetItemFromCollectionAsync(string id)
+        {
+            try
+            {
+                Document doc = await client.ReadDocumentAsync(UriFactory.CreateDocumentUri(DatabaseId, CollectionId, id));
+                return JsonConvert.DeserializeObject<Person>(doc.ToString());
+            }
+            catch (DocumentClientException e)
+            {
+                if (e.StatusCode == System.Net.HttpStatusCode.NotFound)
+                {
+                    return null;
+                }
+                else
+                {
+                    throw;
+                }
+            }
         }
     }
 }

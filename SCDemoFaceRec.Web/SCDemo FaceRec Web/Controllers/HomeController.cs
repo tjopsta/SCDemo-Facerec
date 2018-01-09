@@ -48,5 +48,12 @@ namespace SCDemoFaceRecWeb.Controllers
             var persons = await _repo.GetItemsFromCollectionAsync();
             return View(persons);
         }
+
+        [ActionName("Details")]
+        public async Task<ActionResult> DetailsAsync(string id)
+        {
+            var person = await _repo.GetItemFromCollectionAsync(id);
+            return View(person);
+        }
     }
 }
