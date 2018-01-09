@@ -1,6 +1,6 @@
 using System;
 
-namespace SCDemo_FaceRec_Web.Models
+namespace SCDemoFaceRecWeb.Models
 {
     public class ErrorViewModel
     {

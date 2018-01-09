@@ -9,8 +9,9 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SCDemoFaceRec.Web;
 
-namespace SCDemo_FaceRec_Web
+namespace SCDemoFaceRecWeb
 {
     public class Startup
     {
@@ -31,6 +32,8 @@ namespace SCDemo_FaceRec_Web
             })
             .AddAzureAdB2C(options => Configuration.Bind("AzureAdB2C", options))
             .AddCookie();
+
+            services.AddSingleton(typeof(IDocumentDBRepository), typeof(DocumentDBRepository));
 
             services.AddMvc();
         }

@@ -16,7 +16,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "SCDemo_FaceRec_Web": {
+    "SCDemoFaceRecWeb": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
