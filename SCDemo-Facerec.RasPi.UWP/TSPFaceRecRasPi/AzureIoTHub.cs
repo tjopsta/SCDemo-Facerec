@@ -23,7 +23,7 @@ class AzureIoTHub
     // see information on iothub-explorer at http://aka.ms/iothubgetstartedVSCS
     //
     const string deviceConnectionString = "HostName=SCDemo-IotHub.azure-devices.net;DeviceId=rugro-yyc01;SharedAccessKey=YVLAaA0/uqduEeJ7kxWoiNqxMAZlhOjzBT88q5GpNkM=";
-
+    
 
     //
     // To monitor messages sent to device "kraaa" use iothub-explorer as follows:

@@ -280,6 +280,8 @@ namespace TSPFaceRecRasPi
 
                 //new Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation().Id.ToString()
 
+
+                //Get Device ID from IOT Hub for File name
                 PHOTO_FILE_NAME = "YYC01_" 
                     + DateTime.UtcNow.Year + DateTime.UtcNow.Month + DateTime.UtcNow.Day + DateTime.UtcNow.Hour + DateTime.UtcNow.Minute 
                     + DateTime.UtcNow.Second + ".jpg";
