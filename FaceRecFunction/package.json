@@ -1,0 +1,23 @@
+{
+  "name": "scdemo-facerec-fn",
+  "version": "1.0.0",
+  "description": "A function that uses the Microsoft Cognitive Services Face API to detect and match faces.",
+  "main": "face_api_function.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tjopsta/SCDemo-Facerec.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tjopsta/SCDemo-Facerec/issues"
+  },
+  "homepage": "https://github.com/tjopsta/SCDemo-Facerec#readme",
+  "dependencies": {
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  }
+}

@@ -1,0 +1,22 @@
+{
+    "topic": "/subscriptions/23d68b2e-6e0c-48b7-84d0-6f18231a6b4c/resourceGroups/SCDemo-FaceRec/providers/Microsoft.Storage/storageAccounts/scdemophotorepo01",
+    "subject": "/blobServices/default/containers/images/blobs/yyz01_20180108120700.jpg",
+    "data": {
+        "api": "PutBlockList",
+        "clientRequestId": "8a12db21-f8e9-451c-9275-b918682fe058",
+        "requestId": "479d568b-001e-0095-7eb9-8822e9000000",
+        "eTag": "0x8D556D0E484FAC7",
+        "contentType": "image/jpeg",
+        "contentLength": 2725021,
+        "blobType": "BlockBlob",
+        "url": "https://scdemophotorepo01.blob.core.windows.net/images/yyz01_20180108120700.jpg",
+        "sequencer": "0000000000000AEA000000000CD8849B",
+        "storageDiagnostics": {
+            "batchId": "a3c5b52f-ac89-4809-95c7-b7445b552b30"
+        }
+    },
+    "eventType": "Microsoft.Storage.BlobCreated",
+    "publishTime": "0001-01-01T00:00:00",
+    "eventTime": "2018-01-08T19:49:12.9919754Z",
+    "id": "479d568b-001e-0095-7eb9-8822e9069777"
+}
